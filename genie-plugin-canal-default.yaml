@@ -122,8 +122,9 @@ spec:
     metadata:
       labels:
         k8s-app: genie
-      annotations:
-        scheduler.alpha.kubernetes.io/critical-pod: ''
+      # annotations:
+      #   scheduler.alpha.kubernetes.io/critical-pod: ''
+    priorityClassName: system-cluster-critical
     spec:
       hostNetwork: true
       hostPID: true
